@@ -88,4 +88,5 @@ class TodoDb : DbContext
 record WeatherForecast(DateTime Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    public int FeelsLike => TemperatureC > 30 ? (int)(TemperatureC) + 5 : (int)(TemperatureC) - 2;
 }
